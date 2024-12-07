@@ -1,3 +1,4 @@
+
 from flask import Flask, jsonify
 import pandas as pd
 from flask_cors import CORS
@@ -9,8 +10,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Load datasets (make sure the path is correct on PythonAnywhere)
-hardware_inventory_data = pd.read_csv('hardware_inventory_realistic_prices.csv')
-budget_data = pd.read_csv('budgetval.csv')
+hardware_inventory_data = pd.read_csv('./updated_hardware_inventory.csv')
+budget_data = pd.read_csv('./BUDGET_FINAL2.csv')
 
 # Route to check if the Flask app is working
 @app.route('/')
